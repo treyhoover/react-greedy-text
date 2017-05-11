@@ -1,0 +1,15 @@
+{
+  "presets": ["es2015-rollup", "stage-2", "react"],
+  "env": {
+    "commonjs": {
+      "plugins": [
+        ["transform-es2015-modules-commonjs", { "loose": true }]
+      ]
+    },
+    "es": {
+      "plugins": [
+        "./build/use-lodash-es"
+      ]
+    }
+  }
+}
