@@ -1,6 +1,6 @@
 {
   "name": "react-greedy-text",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "browser": "dist/react-greedy-text.js",
@@ -20,6 +20,12 @@
     "build:watch": "yarn run build:umd -- --watch",
     "prepublish": "yarn run clean && yarn run lint && yarn test && yarn run build"
   },
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "es"
+  ],
   "author": "Trey Hoover <trey.hoover@gmail.com>",
   "license": "MIT",
   "devDependencies": {
