@@ -36,7 +36,7 @@ class GreedyText extends React.Component {
   }
 
   componentWillReceiveProps() {
-    this.resize();
+    window.requestAnimationFrame(this.resize);
   }
 
   get parentStyle() {
@@ -142,6 +142,7 @@ class GreedyText extends React.Component {
           ref={this.bindRef}
           style={{
               ...style,
+              overflow: 'hidden',
               transition,
               position: 'absolute',
               top: this.top,
