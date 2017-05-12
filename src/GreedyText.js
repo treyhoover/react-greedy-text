@@ -35,8 +35,10 @@ class GreedyText extends React.Component {
       this._node = null;
   }
 
-  componentWillReceiveProps() {
-    window.requestAnimationFrame(this.resize);
+  componentDidUpdate(nextProps, nextState) {
+    if (this.props.children !== nextProps.children) {
+      this.resize();
+    }
   }
 
   get parentStyle() {
