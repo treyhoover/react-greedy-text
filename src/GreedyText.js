@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-proptypes';
 import ResizeObserver from 'resize-observer-polyfill';
 import { cloneNode, forceRedraw, isOverflowing } from './utils/DOM';
-import { debounce } from 'lodash';
+import debounce from 'lodash.debounce';
 
 // usually only needs about 10 attempts per resize with these settings
 const PRECISION = 1;
