@@ -114,6 +114,10 @@ class GreedyText extends React.Component {
           fontSize = newFontSize;
       }
 
+      const updateIsWithinErrorMargin = Math.abs(fontSize - this.state.fontSize) < PRECISION;
+
+      if (this.state.loaded && updateIsWithinErrorMargin) return;
+
       // remove the temporary element tree from the DOM
       cleanUp();
 
